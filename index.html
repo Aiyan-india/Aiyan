@@ -4,25 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aiyan – Dosa Batter & Goli Soda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #f9f5ee;
-      color: #3b2f1f;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffaf3;
+      color: #333;
     }
 
-    .header-container {
+    header {
+      background-color: #fff;
+      padding: 20px;
+      border-bottom: 1px solid #eee;
       display: flex;
       align-items: center;
-      padding: 20px;
       justify-content: center;
       flex-wrap: wrap;
-      text-align: left;
     }
 
-    .header-container img {
-      max-height: 100px;
+    header img {
+      height: 80px;
       margin-right: 20px;
     }
 
@@ -32,8 +34,35 @@
     }
 
     .header-text p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       margin: 5px 0 0 0;
+      color: #666;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #f9e8d9, #fef1e3);
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .hero a {
+      background-color: #6b8e23;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
     nav {
@@ -52,7 +81,7 @@
 
     section {
       padding: 40px 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
     }
 
@@ -67,59 +96,122 @@
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
+      justify-content: center;
     }
 
     .product {
       flex: 1;
       min-width: 250px;
+      max-width: 300px;
       background-color: #fffdf6;
       border: 1px solid #d2b48c;
       padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .product img {
+      max-width: 100%;
+      height: 180px;
+      object-fit: cover;
       border-radius: 8px;
+      margin-bottom: 15px;
     }
 
     footer {
       background-color: #6b8e23;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
+      position: relative;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.2em;
+      text-decoration: none;
+    }
+
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .floating-button a {
+      background-color: #25D366;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+
+    .call-button {
+      background-color: #4CAF50;
     }
 
     @media (max-width: 600px) {
-      .product-grid {
-        flex-direction: column;
-      }
-
-      .header-container {
+      header {
         flex-direction: column;
         text-align: center;
       }
 
-      .header-container img {
-        margin: 0 0 10px 0;
+      header img {
+        margin-bottom: 10px;
+      }
+
+      .product-grid {
+        flex-direction: column;
+      }
+
+      .hero h2 {
+        font-size: 1.5em;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Updated Header with Logo -->
+  <!-- Header -->
   <header>
-    <div class="header-container">
-      <img src="aiyan-logo.jpg" alt="Aiyan Logo" />
-      <div class="header-text">
-        <h1>Aiyan</h1>
-        <p>Authentic South Indian Dosa Batter & Goli Soda – Supplied Fresh to Your Store</p>
-      </div>
+    <img src="aiyan-logo.jpg" alt="Aiyan Logo">
+    <div class="header-text">
+      <h1>Aiyan</h1>
+      <p>Dosa Batter & Goli Soda – Delivered Fresh to Your Store</p>
     </div>
   </header>
 
+  <!-- Hero -->
+  <div class="hero">
+    <h2>Experience Authentic South Indian Taste</h2>
+    <p>Freshly made dosa batter and nostalgic goli soda – every single day.</p>
+    <a href="#contact">Order Now</a>
+  </div>
+
+  <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
     <a href="#products">Products</a>
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- About Section -->
   <section id="about">
     <h2>Our Story</h2>
     <p>Aiyan is all about keeping tradition alive. We bring you freshly made dosa batter—just like home—and nostalgic goli soda in classic flavors. No preservatives, no shortcuts. Just honest taste, delivered daily to retail stores and local shops.</p>
@@ -134,20 +226,24 @@
     </div>
   </section>
 
+  <!-- Products Section -->
   <section id="products">
     <h2>Our Products</h2>
     <div class="product-grid">
       <div class="product">
+        <img src="dosa.jpg" alt="Dosa Batter">
         <h3>Dosa Batter</h3>
         <p>Smooth, perfectly fermented batter—ready to pour and sizzle. Packed in hygienic pouches for convenience.</p>
       </div>
       <div class="product">
+        <img src="goli.jpg" alt="Goli Soda">
         <h3>Goli Soda</h3>
         <p>Pop the marble and taste the memories. Available in Lemon, Orange, and Cola flavors.</p>
       </div>
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
     <p>Interested in stocking Aiyan products in your store? We'd love to hear from you!</p>
@@ -156,24 +252,20 @@
     <strong>WhatsApp:</strong> <a href="https://wa.me/919884174380" target="_blank">Chat Now</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <a href="tel:+919500792830" style="
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      z-index: 1000;
-    ">
-      📞 Call Now
-    </a>
     &copy; 2025 Aiyan. Made with tradition. Supplied with care.
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+    </div>
   </footer>
+
+  <!-- Floating Buttons -->
+  <div class="floating-button">
+    <a href="https://wa.me/919884174380" target="_blank">💬 WhatsApp</a>
+    <a href="tel:+919500792830" class="call-button">📞 Call Now</a>
+  </div>
 
 </body>
 </html>
